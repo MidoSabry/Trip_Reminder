@@ -66,13 +66,13 @@ public class AddTripActivity extends AppCompatActivity implements AdapterView.On
             if (aBoolean)
                 finish();
         });
-        binding.addEdStartPoint.getEditText().setOnClickListener(new View.OnClickListener() {
+        binding.edStartPoint.getEditText().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivityForResult(intent, REQ_CODE);
             }
         });
-        binding.addEdEndPoint.getEditText().setOnClickListener(new View.OnClickListener() {
+        binding.edEndPoint.getEditText().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivityForResult(intent, REQ_CODE + 1);
@@ -88,7 +88,7 @@ public class AddTripActivity extends AppCompatActivity implements AdapterView.On
                 updateLabel();
             }
         };
-        binding.addEdDate.getEditText().setOnClickListener(new View.OnClickListener() {
+        binding.edDate.getEditText().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new DatePickerDialog(AddTripActivity.this, date, myCalendar
@@ -96,7 +96,7 @@ public class AddTripActivity extends AppCompatActivity implements AdapterView.On
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
-        binding.addEdTime.getEditText().setOnClickListener(new View.OnClickListener() {
+        binding.edTime.getEditText().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -107,7 +107,7 @@ public class AddTripActivity extends AppCompatActivity implements AdapterView.On
                 mTimePicker = new TimePickerDialog(AddTripActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        binding.addEdTime.getEditText().setText(selectedHour + ":" + selectedMinute);
+                        binding.edTime.getEditText().setText(selectedHour + ":" + selectedMinute);
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
@@ -119,11 +119,11 @@ public class AddTripActivity extends AppCompatActivity implements AdapterView.On
             @Override
             public void onClick(View v) {
 
-                String name = binding.addEdName.getEditText().getText().toString();
-                String startPoint = binding.addEdStartPoint.getEditText().getText().toString();
-                String endPoint = binding.addEdEndPoint.getEditText().getText().toString();
-                String date = binding.addEdDate.getEditText().getText().toString();
-                String time = binding.addEdTime.getEditText().getText().toString();
+                String name = binding.edName.getEditText().getText().toString();
+                String startPoint = binding.edStartPoint.getEditText().getText().toString();
+                String endPoint = binding.edEndPoint.getEditText().getText().toString();
+                String date = binding.edDate.getEditText().getText().toString();
+                String time = binding.edTime.getEditText().getText().toString();
                 String type = getResources().getStringArray(R.array.types)[spinner.getSelectedItemPosition()];
 
 
@@ -141,10 +141,10 @@ public class AddTripActivity extends AppCompatActivity implements AdapterView.On
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQ_CODE && resultCode == RESULT_OK) {
             Place place = Autocomplete.getPlaceFromIntent(data);
-            binding.addEdStartPoint.getEditText().setText(place.getAddress());
+            binding.edStartPoint.getEditText().setText(place.getAddress());
         } else if (requestCode == REQ_CODE + 1 && resultCode == RESULT_OK) {
             Place place = Autocomplete.getPlaceFromIntent(data);
-            binding.addEdEndPoint.getEditText().setText(place.getAddress());
+            binding.edEndPoint.getEditText().setText(place.getAddress());
         } else {
             Status status = Autocomplete.getStatusFromIntent(data);
             Toast.makeText(this, "error  " + status.getStatusMessage(), Toast.LENGTH_SHORT).show();
@@ -153,7 +153,7 @@ public class AddTripActivity extends AppCompatActivity implements AdapterView.On
     private void updateLabel() {
         String myFormat = "MM/dd/yyyy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-        binding.addEdDate.getEditText().setText(sdf.format(myCalendar.getTime()));
+        binding.edDate.getEditText().setText(sdf.format(myCalendar.getTime()));
     }
 
     @Override
