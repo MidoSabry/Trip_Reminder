@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/FinalTrip2.iml" filepath="$PROJECT_DIR$/.idea/FinalTrip2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trip Reminder Iti.iml" filepath="$PROJECT_DIR$/Trip Reminder Iti.iml" group="Trip Reminder Iti" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Trip Reminder Iti/app" />
+    </modules>
+  </component>
+</project>
