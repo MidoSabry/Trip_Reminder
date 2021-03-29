@@ -48,7 +48,6 @@
             android:label="@string/title_activity_home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- Set your credentials for the HERE SDK. -->
@@ -60,7 +59,6 @@
             android:value="0fURe3dyatACPj-pgDzJnZFAw6-DpAWSHA4ElIFT3aLAGenABfbY4wTafqWRTDVdlSAiIJtvc8OqdW5P0e2shA" />
 
         <activity android:name=".ui.add_trip.AddTripActivity" />
-        <activity android:name=".ui.dashboard.MapActivity" />
 
 
     </application>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/heresdk-explore-android-4.6.4.0.4649.aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c551aa5eca193cac15afecb1bad13f0/jetified-heresdk-explore-android-4.6.4.0.4649/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0eda3098410b405e94981b575f9d3d2c/jetified-heresdk-explore-android-4.6.4.0.4649/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0eda3098410b405e94981b575f9d3d2c/jetified-heresdk-explore-android-4.6.4.0.4649/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0eda3098410b405e94981b575f9d3d2c/jetified-heresdk-explore-android-4.6.4.0.4649/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

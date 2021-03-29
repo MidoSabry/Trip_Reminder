@@ -62,14 +62,14 @@ public class DashboardFragment extends Fragment {
             dashboardAdapter.changeData(trips);
 
         });
-
-        binding.homeBtnAddTrip.setOnClickListener(new View.OnClickListener() {
+/*
+        binding.h.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(),MapActivity.class));
             }
         });
-
+*/
 
 
 
@@ -78,8 +78,8 @@ public class DashboardFragment extends Fragment {
 
         List<Trip>data = TripDatabase.getInstance(getActivity()).tripDao().getAll();
 
-        getLangLat(data.get(0).getStartPoint());
-        getLangLat(data.get(0).getEndPoint());
+//        getLangLat(data.get(0).getStartPoint());
+  //      getLangLat(data.get(0).getEndPoint());
 
         return view;
     }
@@ -115,12 +115,12 @@ public class DashboardFragment extends Fragment {
                     address=null;
             }
             Log.e("lll","the item is "+ address);
-            sentenseArray = address.split(",,,");
-            lat = sentenseArray[0];
-            lang = sentenseArray[1];
+            //sentenseArray = address.split(",,,");
+            //lat = sentenseArray[0];
+            //lang = sentenseArray[1];
 
-            latitude = Double.parseDouble(lat);
-            langtude = Double.parseDouble(lang);
+            //latitude = Double.parseDouble(lat);
+            //langtude = Double.parseDouble(lang);
 
 
             Log.e("lll","lat item is "+ latitude);

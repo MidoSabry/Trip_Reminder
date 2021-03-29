@@ -125,13 +125,13 @@ public class TripDetailsActivity extends AppCompatActivity   implements AdapterV
                 changeBehaviour(aBoolean);
 
         });
-
+/*
         binding.detailsBtnNotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewModel.getNotesFromDatabase(currentTrip.getId());
             }
-        });
+        });*/
 
         notesAdapter.setNoteDeleteClickListener = new NotesAdapter.NoteDeleteClickListener() {
             @Override
